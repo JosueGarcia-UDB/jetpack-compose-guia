@@ -21,8 +21,8 @@ sealed class Screen(val route: String) {
         fun createRoute(carreraName: String) = "carrera/${Uri.encode(carreraName)}"
     }
 
-    object Materia : Screen("materia/(codigo)"){
-        fun createRoute(codigo: String) = "materia/${codigo}"
+    object Materia : Screen("materia/{codigo}"){
+        fun createRoute(codigo: String) = "materia/$codigo"
     }
 }
 
